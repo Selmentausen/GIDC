@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>693</width>
-    <height>324</height>
+    <height>318</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -337,7 +337,7 @@
       <item>
        <layout class="QHBoxLayout" name="templateLayout" stretch="1,0">
         <item>
-         <widget class="QTableWidget" name="templateTable"/>
+         <widget class="QListWidget" name="listWidget"/>
         </item>
         <item>
          <layout class="QVBoxLayout" name="templateInputLayout">
