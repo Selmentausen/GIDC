@@ -1,7 +1,7 @@
 my_data = {'char_atk': 1308, 'elem_bonus': 7, 'special_bonus': 87,
-        'talent_multi': '326', 'char_lvl': 70, 'crit_rate': 10.8,
-        'crit_dmg': 120.7, 'attack_count': 10, 'enemy_lvl': 86,
-        'enemy_elem_res': 10, 'enemy_phys_res': 50, 'dmg_type': 'elemental'}
+           'talent_multi': '326', 'char_lvl': 70, 'crit_rate': 10.8,
+           'crit_dmg': 120.7, 'attack_count': 10, 'enemy_lvl': 86,
+           'enemy_elem_res': 10, 'enemy_phys_res': 50, 'dmg_type': 'elemental'}
 
 
 def calculate_resistance_damage_reduction(resistance) -> float:

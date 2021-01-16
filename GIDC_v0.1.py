@@ -1,13 +1,14 @@
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from calculate_damage import get_damage_calculations
+from mainWindow import Ui_MainWindow
 import sys
 
 
-class GIDC(QMainWindow):
+class GIDC(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super(GIDC, self).__init__()
-        uic.loadUi('mainWindow.ui', self)
+        self.setupUi(self)
         self.setWindowTitle('GIDC')
         self.calculateButton.clicked.connect(self.calculate_dmg)
         self.data = {}
@@ -40,10 +41,8 @@ class GIDC(QMainWindow):
             return False
 
     def calculate_dmg(self):
-        # Get user input data
         if self.get_data():
             single_hit, single_crit, total_dmg = get_damage_calculations(self.data)
-
             self.sadLabel.setText(f'Single Attack Damage: {single_hit}')
             self.scdLabel.setText(f'Single Crit Damage: {single_crit}')
             self.tadLabel.setText(f'Total Attack Damage: {total_dmg}')
